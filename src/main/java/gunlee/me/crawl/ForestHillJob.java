@@ -1,4 +1,4 @@
-package gunlee.me.croll;
+package gunlee.me.crawl;
 
 import com.linecorp.bot.client.LineMessagingServiceBuilder;
 import com.linecorp.bot.model.PushMessage;
