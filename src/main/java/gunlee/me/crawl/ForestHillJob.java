@@ -23,6 +23,7 @@ import java.io.IOException;
 @Slf4j
 public class ForestHillJob {
     public static final String TOKEN_LINE_SCOUTER = "Wd8jVkD5Fzh7CMl1CTmyOo9ILtWq1MoknQ7kbTMMjQmdU6+cDmfqkwwuE5mB5rLQcFeWCjvjJgnE/MmqT6D+gEsO68vKQh11YygUT7dQmh1JwmWG5mbRqk98Xo1+aBWHllG0AL/6xAp7YMtG9MDVPwdB04t89/1O/w1cDnyilFU=";
+    public static final String LINE_ID_ME = "Udc13afca55bb2fcf770484940cc240dc";
     RestTemplate rt = new RestTemplate();
     String url = "http://www.foresthill.kr/html/reserve/reserve01_02.asp";
     long last = 0L;
@@ -71,7 +72,7 @@ public class ForestHillJob {
     public void pushToLine() throws IOException {
         TextMessage textMessage = new TextMessage("Forrest Hill go to make reservation !!!");
         PushMessage pushMessage = new PushMessage(
-                "Udc13afca55bb2fcf770484940cc240dc",
+                LINE_ID_ME,
                 textMessage
         );
 
